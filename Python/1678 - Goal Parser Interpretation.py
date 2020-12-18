@@ -1,4 +1,4 @@
-﻿/*
+"""
 https://leetcode.com/problems/goal-parser-interpretation/
 
 You own a Goal Parser that can interpret a string command. The command consists of an alphabet of "G", "()" and/or "(al)" in some order. 
@@ -10,28 +10,16 @@ Constraints:
 
 1 <= command.length <= 100
 command consists of "G", "()", and/or "(al)" in some order.
-*/
+"""
 
-namespace _1678
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var test = new Solution();
 
-            System.Console.WriteLine(test.Interpret("G()(al)"));
-            System.Console.WriteLine(test.Interpret("()G()()()()()(al)()()(al)"));
-        }
-    }
+class Solution:
+    def interpret(self, command: str) -> str:
+        interpreted = command.replace('()', 'o').replace('(al)', 'al')
+        return interpreted
 
-    public class Solution
-    {
-        public string Interpret(string command)
-        {
-            command = command.Replace("()", "o").Replace("(al)", ("al"));
 
-            return command;
-        }
-    }
-}
+test = Solution()
+
+print(test.interpret('G()()(al)'))
+print(test.interpret('(al)(al)(al)G(al)(al)(al)(al)G()()(al)()()G()()()()G()'))
