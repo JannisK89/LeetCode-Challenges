@@ -18,3 +18,4 @@ print(test.isPalindrome(1342)) #False
 print(test.isPalindrome(1112223333222111)) #True
 print(test.isPalindrome(12344321)) #True
 print(test.isPalindrome(1234321)) #True
+print(test.isPalindrome(-1234321)) #False
