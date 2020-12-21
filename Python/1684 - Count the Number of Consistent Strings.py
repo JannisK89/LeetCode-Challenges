@@ -15,6 +15,7 @@ words[i] and allowed contain only lowercase English letters.
 """
 from typing import List
 
+
 class Solution:
     def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
         counter = 0
@@ -27,15 +28,14 @@ class Solution:
                 if (letter not in allowed):
                     break
                 else:
-                     counter += 1
+                    counter += 1
 
             if counter >= len(word):
                 result += 1
 
         return result
 
-test = Solution()
-print(test.countConsistentStrings('abc', ['test', 'bace', 'bacacab', 'bbaaaccaaccabbab', 'baceabab' ,'cab']))
 
-                
-            
+test = Solution()
+print(test.countConsistentStrings(
+    'abc', ['test', 'bace', 'bacacab', 'bbaaaccaaccabbab', 'baceabab', 'cab']))

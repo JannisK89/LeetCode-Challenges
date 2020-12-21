@@ -16,6 +16,7 @@ For each kid check if there is a way to distribute extraCandies among the kids s
 
 from typing import List
 
+
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         candyMax = max(candies)
@@ -24,14 +25,13 @@ class Solution:
         for candy in candies:
             if (candy + extraCandies) >= candyMax:
                 resultList.append(True)
-            
+
             else:
-                 resultList.append(False)
-            
+                resultList.append(False)
+
         return resultList
 
 
 test = Solution()
 
-print(test.kidsWithCandies([2,3,5,1,3], 3))
-
+print(test.kidsWithCandies([2, 3, 5, 1, 3], 3))
